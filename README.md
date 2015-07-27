@@ -6,7 +6,9 @@ A Docker image for JIRA software
 * Source code from https://github.com/nhantran/docker-jiradb
 * We can customize user/password for DB user at the first line from create_database.sql
 
-> CREATE USER jiradbuser WITH CREATEDB PASSWORD 'Passw0rd';
+```sql
+CREATE USER jiradbuser WITH CREATEDB PASSWORD 'Passw0rd';
+```
 
 ## Usage
 #### Create JIRA DB service named 'jiradb' for JIRA

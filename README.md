@@ -24,12 +24,19 @@ A Docker image for JIRA software
 * If we have changed user/password of DB user when building JIRA DB image, we need to update them in dbconfig.xml
 
 > \<jira-database-config\>
+>
 >   ...
+>
 >   \<jdbc-datasource\>
+>
 >     ...
+>
 >     \<username\>jiradbuser\</username\>
+>
 >     \<password\>Passw0rd\</password\>
+>
 >   \</jdbc-datasource\>
+>
 > \</jira-database-config\>
 
 * An then start JIRA service as following:

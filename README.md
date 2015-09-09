@@ -13,7 +13,7 @@ CREATE USER jiradbuser WITH CREATEDB PASSWORD 'Passw0rd';
 ## Usage
 #### Create JIRA DB service named 'jiradb' for JIRA
 
-> docker run --name jiradb -p 5432:5432 nhantran/jiradb
+> docker run -d --name jiradb -p 5432:5432 nhantran/jiradb
 
 #### Create a data volume as a service named 'jirahome' for JIRA Home
 
@@ -38,7 +38,7 @@ CREATE USER jiradbuser WITH CREATEDB PASSWORD 'Passw0rd';
 
 * An then start JIRA service as following:
 
-> docker --volume-from jirahome --name jira --link jiradb:dbserver -p 8080:8080 nhantran/jira
+> docker run -d --volumes-from jirahome --name jira --link jiradb:dbserver -p 8080:8080 nhantran/jira
 
 #### Access the JIRA system
 
